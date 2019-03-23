@@ -406,3 +406,15 @@ class LedArrayController():
 
     def bf(self):
         self.command('bf')
+
+
+if __name__ == "__main__":
+    # execute only if run as a script
+    import sys
+    
+    if len(sys.argv) > 1:
+        port = sys.argv[1]
+        led = LedArrayController(port)
+        if len(sys.argv) > 2:
+            print(led.command(sys.argv[2]))
+
