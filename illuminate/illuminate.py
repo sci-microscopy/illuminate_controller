@@ -157,7 +157,7 @@ class IlluminateController():
 
     def getLedArrayParametersDict(self):
         # Get parameters
-        raw = self.command('pp')
+        raw = self.command('pprops')
 
         # Filter serial stream
         filtered = str(raw).replace('\\n', ' ').replace('\\r', '').replace('-==-', '').replace('     ', ' ').replace("'", "\"")[0:-1]
